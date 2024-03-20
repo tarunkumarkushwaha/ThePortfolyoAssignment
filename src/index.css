@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.longmargin{
+margin-top: 1000px;
+border: 2px solid red;
+}
+
