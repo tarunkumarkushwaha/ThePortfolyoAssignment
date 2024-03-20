@@ -11,11 +11,13 @@ import NoData from './Components/NoData'
 import scrooldn from './assets/images/scroll-down.svg'
 import shape from './assets/images/gallery-shape.svg'
 import Testimonials from './Components/Testimonials'
+import Scroll from './Components/Scroll'
+import Cursor from './Components/Cursor'
+import Contact from './Components/Contact'
 
 
 function App() {
-  const [data, setData] = useState()
-  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [data, setData] = useState();
 
   const skills = useRef();
   const home = useRef();
@@ -24,7 +26,6 @@ function App() {
   const portfolio = useRef();
   const contacts = useRef();
   const testimonials = useRef();
-  const backTopBtn = useRef();
 
   useEffect(() => {
     let API_KEY = `${import.meta.env.VITE_API_KEY}`
@@ -35,32 +36,10 @@ function App() {
       })
   }, [])
   console.log(data)
-  console.log(scrollPercentage)
 
   useEffect(() => {
     document.title = data ? data.user.about.name : "loading";
   }, [data]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const bodyHeight = document.body.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const scrollEndPos = bodyHeight - windowHeight;
-      const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
-      setScrollPercentage(totalScrollPercent.toFixed(0));
-      if (totalScrollPercent > 5) {
-        backTopBtn.current.classList.add("show");
-      } else {
-        backTopBtn.current.classList.remove("show");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -70,10 +49,10 @@ function App() {
           <main>
             <article>
               <Mainpage data={data} ref={home} />
+              <About data={data} ref={about} />
               <Service data={data} ref={services} />
               <Portfolio data={data} ref={portfolio} />
               <Skills data={data} ref={skills} />
-              <About data={data} ref={about} />
               <Testimonials data={data} ref={testimonials} />
               <div onClick={() => services.current.scrollIntoView()} className="scroll-down">
                 <img src={scrooldn} width="40" height="66" loading="lazy" alt="mouse scroll" />
@@ -82,20 +61,10 @@ function App() {
 
             </article>
           </main>
-          <Foot data={data} ref={contacts} />
-
-
-          <a href="#top" class="back-top-btn" aria-label="back to top" ref={backTopBtn} data-back-top-btn>{scrollPercentage}%</a>
-
-
-
-
-
-          {/* <!-- 
-      - #CUSTOM CURSOR
-    --> */}
-
-          {/* <div class="cursor" data-cursor></div> */}
+          <Contact data={data} ref={contacts}/>
+          <Foot data={data} />
+          <Scroll/>
+          <Cursor/>
         </> : <NoData />
       }
     </>

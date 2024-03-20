@@ -47,9 +47,14 @@ const Skills = forwardRef((prop, ref) => {
               <div className="section-text">
                 {myList1.map((item, index) => (
                   <div key={index}>
-                    <span>{item.name} <small>{item.percentage}</small></span>
-                    <div className="progress">
-                      <div className="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ width: 95 + "%" }}></div>
+                    <div className="progress-container">
+                      <div className="progress-wrap">
+                        <div><span style={{ float: "left" }}>{item.name}</span><span style={{ float: "right" }}>{item.percentage}%</span></div>
+                        <div className="progress">
+                          <div className="progress-bar" style={{ width: item.percentage + '%' }}>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -60,18 +65,19 @@ const Skills = forwardRef((prop, ref) => {
           </div>
           <div className="about-content">
 
-            {/* <h2 className="h2 section-title" ref={revealElement1} data-reveal="left">
-              Skills
-            </h2> */}
-
             <div className="wrapper has-before" ref={revealElement3} data-reveal="left">
 
               <div className="section-text">
                 {myList2.map((item, index) => (
                   <div key={index}>
-                    <span>{item.name} <small>{item.percentage}</small></span>
-                    <div className="progress">
-                      <div className="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ width: 95 + "%" }}></div>
+                    <div className="progress-container">
+                      <div className="progress-wrap">
+                        <div><span style={{ float: "left" }}>{item.name}</span><span style={{ float: "right" }}>{item.percentage}%</span></div>
+                        <div className="progress">
+                          <div className="progress-bar" style={{ width: item.percentage + '%' }}>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}

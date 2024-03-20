@@ -3,7 +3,7 @@ import menu from '../assets/images/menu.svg'
 import user from '../assets/images/user.svg'
 import { NavLink } from 'react-router-dom'
 
-const Navbar = ({ data, skills, home, about, services, contacts, portfolio }) => {
+const Navbar = ({ data, skills, home, about, services, contacts, portfolio, testimonials }) => {
     const [menuOpen, setmenuOpen] = useState(false)
 
     const toggleNav = function () {
