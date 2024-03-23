@@ -5,7 +5,7 @@ const Service = forwardRef((prop, ref) => {
   const myData = prop.data.user.services;
   return (
     <>
-      <section ref={ref} className="section category" aria-label="photography category">
+      <section ref={ref} className="section category p-10" aria-label="services">
         <div className="container">
 
           <ul className="category-list">

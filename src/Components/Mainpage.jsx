@@ -3,6 +3,7 @@ import heroimage from '../assets/images/hero-shape.svg'
 
 const Mainpage = forwardRef((prop, ref) => {
     const [activeLetterBoxIndex, setactiveLetterBoxIndex] = useState(0)
+    const [active, setactive] = useState(false)
     const [lastActiveLetterBoxIndex, setlastActiveLetterBoxIndex] = useState(0)
     const [totalLetterBoxDelay, settotalLetterBoxDelay] = useState(0)
 
@@ -21,6 +22,7 @@ const Mainpage = forwardRef((prop, ref) => {
         letterBoxes2.current.textContent = prop.data.user.services[1].name
         letterBoxes3.current.textContent = prop.data.user.services[2].name
         letterBoxes4.current.textContent = prop.data.user.services[3].name
+
         // loop through all letter boxes
         // setTimeout(function () {
         for (let i = 0; i < letterBoxes.length; i++) {
@@ -79,7 +81,7 @@ const Mainpage = forwardRef((prop, ref) => {
             setlastActiveLetterBoxIndex(i)
         }
 
-        
+
         // console.log("last",lastActiveLetterBoxIndex)
 
         // update activeLetterBoxIndex based on total letter boxes
@@ -90,7 +92,7 @@ const Mainpage = forwardRef((prop, ref) => {
     useEffect(() => {
         setTimeout(function () {
             setLetterEffect()
-        }, (totalLetterBoxDelay * 1000) + 2000);
+        }, 2000);
     }, [activeLetterBoxIndex])
 
     return (
@@ -105,10 +107,10 @@ const Mainpage = forwardRef((prop, ref) => {
                         <h1 className="h1 hero-title">{prop.data.user.about.name}</h1>
 
                         <div className="wrapper h2">
-                            <strong className="strong" ref={letterBoxes1} data-letter-effect>{prop.data.user.services[0].name}</strong>
-                            <strong className="strong" ref={letterBoxes2} data-letter-effect></strong>
-                            <strong className="strong" ref={letterBoxes3} data-letter-effect></strong>
-                            <strong className="strong" ref={letterBoxes4} data-letter-effect></strong>
+                            <strong className="strong data-letter-effect" ref={letterBoxes1} data-letter-effect></strong>
+                            <strong className="strong data-letter-effect" ref={letterBoxes2} data-letter-effect></strong>
+                            <strong className="strong data-letter-effect" ref={letterBoxes3} data-letter-effect></strong>
+                            <strong className="strong data-letter-effect" ref={letterBoxes4} data-letter-effect></strong>
                         </div>
 
                         <p className="hero-text">{prop.data.user.about.exp_year} Years Of Experience</p>

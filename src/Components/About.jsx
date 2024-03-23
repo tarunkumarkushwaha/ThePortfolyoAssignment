@@ -1,8 +1,6 @@
 import { forwardRef, useEffect, useRef } from "react"
 import sign from '../assets/images/signature.png'
-import aboutbanner from '../assets/images/about-banner.jpg'
-import aboutshape1 from '../assets/images/about-shape-1.png'
-import aboutshape2 from '../assets/images/about-shape-2.svg'
+// import aboutshape2 from '../assets/images/about-shape-2.svg'
 import aboutshape3 from '../assets/images/about-shape-3.svg'
 
 const About = forwardRef((prop, ref) => {
@@ -64,15 +62,14 @@ const About = forwardRef((prop, ref) => {
 
                     <figure className="about-banner" ref={revealElement3} data-reveal="left">
 
-                        <div className="img-holder has-before" style={{ width: 450, height: 625 }}>
-                            <img src={prop.data.user.about.avatar.url} width="512" height="684" loading="lazy" alt={prop.data.user.about.name}
+                        <div className="flex justify-center pr-16" style={{ width: 450, height: 625 }}>
+                            <img src={prop.data.user.about.avatar.url} width="450" height="625" loading="lazy" alt={prop.data.user.about.name}
                                 className="img-cover" />
                         </div>
 
                         {/* <p className="imglogo shape shape-1">{prop.data.user.about.name.trim()[0]}</p> */}
 
-                        <img src={aboutshape2} width="659" height="653" loading="lazy" alt=""
-                            className="shape shape-2" />
+                        
 
                     </figure>
 

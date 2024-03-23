@@ -18,10 +18,9 @@
 .flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
-.progress-container{
+.progress-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -30,12 +29,12 @@
 
 .progress-wrap {
   width: 100%;
-  
+
   float: left;
   margin-bottom: 10px;
 }
 
-.progress-bar{
+.progress-bar {
   background-color: rgba(100, 1, 14, 0.801);
   height: 4px;
 }
@@ -53,26 +52,27 @@
   width: 300px;
   max-height: 650px;
   background: #363636;
-  color: #8a8a8a;
-  margin-bottom: 40px;
+  color: #d6d3d3;
+  /* margin-bottom: 40px; */
   margin: 10px;
 }
 
-.test-box img{
+/* .test-box img {
   width: 200px;
   margin: 10px;
-}
-.test-box h3{
-  color: aliceblue;
-}
+} */
 
-.test-box .blog-text {
+/* .test-box h3 {
+  color: aliceblue;
+} */
+
+/* .test-box .blog-text {
   line-height: 1.5;
   margin-bottom: 30px;
   position: relative;
   width: 100%;
   padding: 30px;
-}
+} */
 
 .timeline-label {
   width: 50vw;
@@ -193,7 +193,11 @@
 }
 
 
-
+.testimonial-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
 /*-----------------------------------*\
@@ -425,7 +429,7 @@ body.active {
   align-items: center;
 }
 
-.m-5{
+.m-5 {
   margin: 15px;
 }
 
@@ -867,7 +871,7 @@ body.active {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 35px 10px;
+  gap: 35px 12px;
 }
 
 .category-item {
@@ -908,7 +912,7 @@ body.active {
 }
 
 .about .section-text {
-  font-size: var(--fs-8);
+  font-size: var(--fs-7);
   color: var(--white_a70);
   font-weight: var(--fw-300);
   line-height: 1.7;

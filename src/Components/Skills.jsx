@@ -1,6 +1,4 @@
 import { forwardRef, useEffect, useRef } from "react"
-import aboutshape2 from '../assets/images/about-shape-2.svg'
-import aboutshape3 from '../assets/images/about-shape-3.svg'
 
 const Skills = forwardRef((prop, ref) => {
   const revealElement1 = useRef();

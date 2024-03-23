@@ -26,8 +26,6 @@ const Portfolio = forwardRef((prop, ref) => {
 
     </div>
   ))
-
-  // console.log(portfolioComponent)
   return (
     <>
       <section ref={ref} className="section gallery" id="gallery">
@@ -36,21 +34,21 @@ const Portfolio = forwardRef((prop, ref) => {
           <div className="flex-col h3">
             <h1 className="sub-title">Projects</h1>
           </div>
-          <ul className="gallery-list">
-            <li className="gallery-item" data-reveal>
+          <ul className="gallery-list flex flex-wrap justify-center">
+            <li className="gallery-item">
               {portfolioComponent[0]}
               {portfolioComponent[1]}
             </li>
-            <li className="gallery-item" data-reveal>
+            <li className="gallery-item">
               {portfolioComponent[2]}
               {portfolioComponent[3]}
             </li>
-            <li className="gallery-item" data-reveal>
+            <li className="gallery-item">
               {portfolioComponent[4]}
               {portfolioComponent[5]}
             </li>
 
-            <li className="gallery-item" data-reveal>
+            <li className="gallery-item">
               {portfolioComponent[6]}
               {portfolioComponent[7]}
             </li>

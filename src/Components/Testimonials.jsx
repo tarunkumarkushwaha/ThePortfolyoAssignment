@@ -12,13 +12,13 @@ const Testimonials = forwardRef((prop, ref) => {
         <div className="flex-col h3">
           <h1 className="sub-title">Testimonials</h1>
         </div>
-        <div className="flex-row">{testimonialData.map((item, index) => (
+        <div className="testimonial-card ml-0">{testimonialData.map((item, index) => (
 
-          <div key={index} className="test-box">
-            <img src={item.image.url} alt={item.image.url} />
+          <div key={index} className="test-box p-8">
+            <div className='flex justify-center'><img src={item.image.url} alt={item.image.url} /></div>
             <div className="blog-text">
-              <h3>{item.name}</h3>
-              <p>{item.review}</p>
+              <h3 className='flex text-3xl p-2 font-bold justify-center mt-5 mb-2'>{item.name}</h3>
+              <p className='flex justify-center text-center'>{item.review}</p>
             </div>
           </div>
         ))}</div>
@@ -28,13 +28,14 @@ const Testimonials = forwardRef((prop, ref) => {
           <h1 className="sub-title" ref={revealElement1}>Experience</h1>
         </div>
 
-        <div className="flex-col">
+        <div className="flex-row flex-wrap justify-center ml-14">
           {experiencedata.map((item, i) => (
-            <div class="timeline-label">
-              <h1>{item.company_name}</h1>
-              <h2>{item.jobLocation}</h2>
-              <h2>{item.jobTitle} <span>{item.startDate.split("T")[0]} -- {item.endDate.split("T")[0]}</span></h2>
-              <p> {item.summary}</p>
+            <div key={i} className="timeline-label flex-col justify-center min-w-[300px] min-h-[400px]">
+              <h1 className='flex text-3xl p-2 font-bold justify-center mb-2'>{item.company_name}</h1>
+              <h2 className='flex text-2xl p-2 font-bold justify-center mb-2'>{item.jobLocation}</h2>
+              <h2 className='flex justify-center'>{item.jobTitle}</h2>
+              <h2 className='flex justify-center'>{item.startDate.split("T")[0]} -- {item.endDate.split("T")[0]}</h2>
+              <p className='flex justify-center text-center'> {item.summary}</p>
             </div>
           ))}
         </div>
