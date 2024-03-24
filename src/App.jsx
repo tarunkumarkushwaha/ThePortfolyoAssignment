@@ -56,14 +56,14 @@ function App() {
                 <Portfolio data={data} ref={portfolio} />
                 <Skills data={data} ref={skills} />
                 <Testimonials data={data} ref={testimonials} />
-                <div onClick={() => home.current.scrollIntoView()} className="flex justify-center p-3 scroll-down">
-                  <img src={scrooldn} width="40" height="66" loading="lazy" alt="mouse scroll" />
-                </div>
                 <img src={shape} width="220" height="78" loading="lazy" alt="" className="shape" />
 
               </article>
             </main>
             <Contact data={data} ref={contacts} />
+            <div onClick={() => home.current.scrollIntoView()} className="flex justify-center mr-10 p-3 scroll-down">
+              <img src={scrooldn} width="40" height="66" loading="lazy" alt="mouse scroll" />
+            </div>
             <Foot data={data} />
             <Scroll />
             <Cursor />

@@ -98,7 +98,7 @@ const Mainpage = forwardRef((prop, ref) => {
     return (
         <>
             <section ref={ref} className="section hero" id="home" aria-label="home">
-                <div className="container">
+                <div className="container sm:ml-0 ml-28">
 
                     <img src={prop.data.user.about.avatar.url} width="322" height="322" alt="" className="hero-banner" />
 

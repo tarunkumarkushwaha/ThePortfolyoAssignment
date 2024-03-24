@@ -32,7 +32,7 @@ const Portfolio = forwardRef((prop, ref) => {
 
         <div className="container pl-48">
           <div className="flex-col h3">
-            <h1 className="sub-title">Projects</h1>
+            <h1 className="sub-title flex justify-center">Projects</h1>
           </div>
           <ul className="gallery-list flex flex-wrap justify-center">
             <li className="gallery-item">

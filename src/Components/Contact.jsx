@@ -31,10 +31,10 @@ const Contact = forwardRef((prop, ref) => {
 
     return (
         <>
-            <div ref={ref} className="footer">
+            <div ref={ref} className="footer max-sm:pl[20%]">
 
                 <div className="footer-top section" id="contact">
-                    <div className="container">
+                    <div className="container md:ml-52 ml-28">
 
                         <p className="section-subtitle" ref={revealElement1} data-reveal>Contact Us</p>
 

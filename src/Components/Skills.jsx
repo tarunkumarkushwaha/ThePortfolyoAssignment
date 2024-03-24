@@ -34,7 +34,7 @@ const Skills = forwardRef((prop, ref) => {
     <>
       <section ref={ref} className="section about" id="about" aria-label="about me">
         <div className="flex-col h3">
-          <h1 className="sub-title" ref={revealElement1}>Skills</h1>
+          <h1 className="sub-title flex justify-center" ref={revealElement1}>Skills</h1>
         </div>
         <div className="container md:pl-1 pl-20">
 

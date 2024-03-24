@@ -8,9 +8,9 @@ const Foot = ({data}) => {
 
   return (
     <>
-      <footer className="footer">
+      <footer className="footer max-sm:pl[20%]">
         <div className="footer-bottom">
-          <div className="container">
+          <div className="container ml-28">
 
             <a href="#" className="logo">
               <p className="imglogo">{data.user.about.name.trim()[0]}</p>
@@ -37,11 +37,6 @@ const Foot = ({data}) => {
             <p className="copyright">Made with love</p>
 
           </div>
-        </div>
-
-        <div className="footer-bg has-before">
-          <img src={footbg} width="1920" height="1135" loading="lazy" alt="photography"
-            className="img-cover" />
         </div>
 
       </footer>
