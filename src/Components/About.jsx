@@ -62,7 +62,7 @@ const About = forwardRef((prop, ref) => {
 
                     <figure className="about-banner" ref={revealElement3} data-reveal="left">
 
-                        <div className="flex justify-center pr-16" style={{ width: 450, height: 625 }}>
+                        <div className="flex justify-center md:pr-1 pr-16" style={{ width: 450, height: 625 }}>
                             <img src={prop.data.user.about.avatar.url} width="450" height="625" loading="lazy" alt={prop.data.user.about.name}
                                 className="img-cover" />
                         </div>
