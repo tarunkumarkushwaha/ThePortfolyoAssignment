@@ -46,21 +46,22 @@ const Contact = forwardRef((prop, ref) => {
                             <img src={arrow} width="43" height="20" loading="lazy" alt="arrow-forward icon" />
                         </a>
 
-                        <div className="flex-col m-5">
-                            <div><p className="navbar-title">My Address</p>
+                        <div className="flex flex-col justify-center m-5 rounder-md">
+                            <div
+                                className='flex flex-col justify-center mx-auto p-32 rounded-[10%] pt-4 border-4 border-slate-500 '
+                            ><p className="navbar-title">My Address</p>
 
                                 <address className="navbar-text">
                                     {prop.data.user.about.address}
-                                </address></div>
+                                </address>
 
                             <p className="navbar-text">
                                 For enquiry call at
                                 <a href={prop.data.user.about.phoneNumber} className="contact-link">{prop.data.user.about.phoneNumber}</a>
                             </p>
+                            <img src={footshape} width="185" height="134" loading="lazy" alt="" className="shape" />
                         </div>
-
-                        <img src={footshape} width="185" height="134" loading="lazy" alt="" className="shape" />
-
+                        </div>
                     </div>
                 </div>
             </div>

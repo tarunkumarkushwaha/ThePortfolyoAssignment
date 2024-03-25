@@ -1486,6 +1486,7 @@ body.active {
 
   .hero {
     padding-block-start: 150px;
+    padding: 100px 100px;
   }
 
   .hero .container {
@@ -1498,7 +1499,8 @@ body.active {
   }
 
   .hero .wrapper {
-    --fs-2: 8rem;
+    --fs-2: 5rem;
+    /* margin-inline: 100px 209px; */
     margin-block: -5px 10px;
   }
 
@@ -1806,6 +1808,7 @@ body.active {
 
   .hero {
     padding-block: 170px 150px;
+    padding-inline: 100px 100px;
   }
 
   .hero .container {
@@ -1813,7 +1816,7 @@ body.active {
   }
 
   .hero .wrapper {
-    --fs-2: 10rem;
+    --fs-2: 7rem;
     margin-right: 36%;
     margin-block: -10px 15px;
   }
@@ -2047,12 +2050,16 @@ body.active {
     max-width: 1500px;
   }
 
+  .hero{
+    padding-inline: 100px 100px;
+  }
+
   .hero-content {
     margin-inline-end: 400px;
   }
 
   .hero .wrapper {
-    --fs-2: 13rem;
+    --fs-2: 11rem;
   }
 
   .hero-text {

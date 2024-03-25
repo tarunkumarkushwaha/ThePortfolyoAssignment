@@ -26,6 +26,15 @@ const Testimonials = forwardRef((prop, ref) => {
     }
   }
 
+  let testimonials = prop.data.user.testimonials
+
+  let size = 3;
+  let testimonialsitems = [];
+  for (var i = 0; i < testimonials.length; i += size) {
+    testimonialsitems.push(testimonials.slice(i, i + size));
+  }
+  console.log("new arr", testimonialsitems);
+
   useEffect(() => {
     scrollReveal();
     window.removeEventListener('scroll', scrollReveal);
@@ -39,17 +48,22 @@ const Testimonials = forwardRef((prop, ref) => {
         <div className="flex justify-center h3">
           <h1 className="sub-title">Testimonials</h1>
         </div>
-        <div ref={revealElement1} className="testimonial-card ml-0">{testimonialData.map((item, index) => (
-
-          <div key={index} className="test-box bg-gray-800 p-8 min-w-[300px] min-h-[400px]">
-            <div className='flex justify-center'><img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={item.image.url} alt={item.image.url} />
-            </div>
-            <div className="blog-text">
-              <h3 className='flex text-3xl p-2 font-bold justify-center mt-5 mb-2'>{item.name}</h3>
-              <p className='flex justify-center text-gray-400 text-center'>{item.review}</p>
-            </div>
+        <div ref={revealElement1} className="flex flex-col ">{testimonialsitems.map((items, index) => {
+          return <div key={index} className="testimonial-card ml-0">
+            {items.map((item) => {
+              return <div key={index} className="test-box bg-gray-800 p-8 min-w-[300px] min-h-[400px]">
+                <div className='flex justify-center'><img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={item.image.url} alt={item.image.url} />
+                </div>
+                <div className="blog-text">
+                  <h3 className='flex text-3xl p-2 font-bold justify-center mt-5 mb-2'>{item.name}</h3>
+                  <p className='flex justify-center text-gray-400 text-center'>{item.review}</p>
+                </div>
+              </div>
+            })}
           </div>
-        ))}</div>
+        }
+        )}
+        </div>
 
 
         <div className="h3">

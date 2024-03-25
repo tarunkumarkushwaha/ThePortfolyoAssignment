@@ -61,7 +61,7 @@ function App() {
               </article>
             </main>
             <Contact data={data} ref={contacts} />
-            <div onClick={() => home.current.scrollIntoView()} className="flex justify-center mr-10 p-3 scroll-down">
+            <div onClick={() => home.current.scrollIntoView()} className="cursor-pointer flex justify-center mr-10 p-3 scroll-down">
               <img src={scrooldn} width="40" height="66" loading="lazy" alt="mouse scroll" />
             </div>
             <Foot data={data} />
