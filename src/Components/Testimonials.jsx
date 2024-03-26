@@ -43,7 +43,7 @@ const Testimonials = forwardRef((prop, ref) => {
 
   return (
     <>
-      <section ref={ref} className='md:ml-1 ml-40'>
+      <section ref={ref} className='md:ml-1 ml-48'>
         <div ref={revealElement1} className="flex justify-center h3">
           <h1 className="sub-title">Testimonials</h1>
         </div>
