@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { forwardRef, useRef } from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import footbg from '../assets/images/footer-bg.jpg'
+import scrooldn from '../assets/images/scroll-down.svg'
 
-const Foot = ({data}) => {
+const Foot = ({data,home}) => {
 
   return (
     <>
@@ -12,9 +12,10 @@ const Foot = ({data}) => {
         <div className="footer-bottom">
           <div className="container ml-28">
 
-            <a href="#" className="logo">
+            {/* <a href="#" className="logo">
               <p className="imglogo">{data.user.about.name.trim()[0]}</p>
-            </a>
+            </a> */}
+            <p className="copyright">Made with love</p>
 
             <ul className="social-list">
 
@@ -34,7 +35,9 @@ const Foot = ({data}) => {
 
             </ul>
 
-            <p className="copyright">Made with love</p>
+            <div title='Go to top' onClick={() => home.current.scrollIntoView()} className="cursor-pointer flex justify-center scroll-down">
+              <img src={scrooldn} width="40" height="66" loading="lazy" alt="mouse scroll" />
+            </div>
 
           </div>
         </div>

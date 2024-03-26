@@ -3,7 +3,7 @@ import menu from '../assets/images/menu.svg'
 import user from '../assets/images/user.svg'
 import { NavLink } from 'react-router-dom'
 
-const Navbar = ({ data, skills, home, about, services, contacts, portfolio, testimonials }) => {
+const Navbar = ({ data, skills, home, about, services, contacts, portfolio, testimonials, experience }) => {
     const [menuOpen, setmenuOpen] = useState(false)
 
     const toggleNav = function () {
@@ -75,6 +75,9 @@ const Navbar = ({ data, skills, home, about, services, contacts, portfolio, test
 
                             <li className="navbar-item">
                                 <div onClick={() => skills.current.scrollIntoView()} className="navbar-link" data-nav-link>Skills</div>
+                            </li>
+                            <li className="navbar-item">
+                                <div onClick={() => experience.current.scrollIntoView()} className="navbar-link" data-nav-link>Experience</div>
                             </li>
                             <li className="navbar-item">
                                 <div onClick={() => testimonials.current.scrollIntoView()} className="navbar-link" data-nav-link>Testimonials</div>

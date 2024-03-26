@@ -16,9 +16,9 @@ const Service = forwardRef((prop, ref) => {
                   <h3 className="h4 card-title">{item.name}</h3>
 
                   <figure className="card-banner img-holder" style={{ width: 270, zIndex: 1, height: 320, borderRadius: 10, backgroundImage: `url(${item.image.url})` }}>
-                    <div className="service-card flex-col" style={{ width: 270, zIndex: 1, height: 320, borderRadius: 10 }}>
-                      <p>price - {item.charge}</p>
-                      <p>description - {item.desc}</p>
+                    <div className="service-card flex flex-col justify-end items-center" style={{ width: 270, zIndex: 1, height: 320, borderRadius: 10 }}>
+                      <p className='text-3xl p-2 font-serif font-bold text-slate-300'>price - {item.charge}</p>
+                      <p className='text-center'>description - {item.desc}</p>
                     </div>
                   </figure>
                 </a>

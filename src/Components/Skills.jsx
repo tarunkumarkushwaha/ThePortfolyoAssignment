@@ -36,7 +36,7 @@ const Skills = forwardRef((prop, ref) => {
         <div className="flex-col h3">
           <h1 className="sub-title flex justify-center" ref={revealElement1}>Skills</h1>
         </div>
-        <div className="container md:pl-1 pl-20">
+        <div className="container md:pl-1 pl-24">
 
           <div className="about-content">
 

@@ -869,6 +869,7 @@ body.active {
 
 .category-item {
   max-width: calc(50% - 5px);
+  display: flex;
 }
 
 .category-card .card-title {
@@ -1298,7 +1299,7 @@ body.active {
    */
 
   .category-item {
-    max-width: 235px;
+    max-width: 280px;
   }
 
 
@@ -1971,7 +1972,7 @@ body.active {
    */
 
   .footer-top {
-    padding-block: 300px;
+    padding-block: 150px;
   }
 
   .footer-top .section-title {
@@ -2091,7 +2092,7 @@ body.active {
    */
 
   .about {
-    padding-block: 180px 120px;
+    padding-block: 50px 120px;
   }
 
 
