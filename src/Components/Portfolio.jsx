@@ -6,8 +6,8 @@ const Portfolio = forwardRef((prop, ref) => {
   const portfolioComponent = myData.map((item, index) => (
     <div key={index} className="gallery-card">
 
-      <figure className="card-banner img-holder has-before" style={{ width: 290, height: 340 }}>
-        <img src={item.image.url} width="450" height="625" loading="lazy" alt="The Drunken"
+      <figure className="card-banner img-holder has-before" style={{ width: 250, height: 300 }}>
+        <img src={item.image.url} width="250" height="300" loading="lazy" alt="The Drunken"
           className="img-cover" />
       </figure>
 
@@ -30,7 +30,7 @@ const Portfolio = forwardRef((prop, ref) => {
     <>
       <section ref={ref} className="section gallery" id="gallery">
 
-        <div className="container sm:pl-30 pl-48">
+        <div className="container sm:pl-16 pl-48">
           <div className="flex-col h3">
             <h1 className="sub-title flex justify-center">Projects</h1>
           </div>
