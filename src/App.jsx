@@ -48,7 +48,8 @@ function App() {
       {data ?
         <>
           <Context.Provider value={{ data }}>
-            <Navbar data={data} testimonials={testimonials} services={services} skills={skills} home={home} about={about} contacts={contacts} portfolio={portfolio} />
+            <Navbar data={data} testimonials={testimonials} experience={experience}
+             services={services} skills={skills} home={home} about={about} contacts={contacts} portfolio={portfolio} />
             <main>
               <article>
                 <Mainpage data={data} ref={home} />
