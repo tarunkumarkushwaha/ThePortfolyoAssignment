@@ -1,9 +1,6 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
 
 const Testimonials = forwardRef((prop, ref) => {
-  let experiencedata = prop.data.user.timeline
-  let testimonialData = prop.data.user.testimonials;
-
   const revealElement1 = useRef();
   const revealElement2 = useRef();
   // const revealElement3 = useRef();
@@ -12,7 +9,6 @@ const Testimonials = forwardRef((prop, ref) => {
   const List = prop.data.user.skills;
   const myList1 = List.slice(0, 10);
   const myList2 = List.slice(10, 20);
-  // console.log(myList1,myList2)
 
   const scrollReveal = function () {
     for (let i = 0; i < revealElements.length; i++) {
@@ -50,12 +46,12 @@ const Testimonials = forwardRef((prop, ref) => {
         <div ref={revealElement2} className="flex flex-col ">{testimonialsitems.map((items, index) => {
           return <div key={index} className="testimonial-card ml-0">
             {items.map((item) => {
-              return <div key={item.name} className="test-box bg-gray-800 p-8 min-w-[300px] min-h-[400px]">
+              return <div key={item.name} className="test-box bg-zinc-800 p-8 min-w-[300px] min-h-[400px]">
                 <div className='flex justify-center'><img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={item.image.url} alt={item.image.url} />
                 </div>
                 <div className="blog-text">
                   <h3 className='flex text-3xl p-2 font-bold justify-center mt-5 mb-2'>{item.name}</h3>
-                  <p className='flex justify-center text-gray-400 text-center'>{item.review}</p>
+                  <p className='flex justify-center text-gray-400'>{item.review}</p>
                 </div>
               </div>
             })}

@@ -48,7 +48,7 @@ const Contact = forwardRef((prop, ref) => {
 
                         <div className="flex flex-col justify-center m-5 rounder-md">
                             <div
-                                className='flex flex-col justify-center mx-auto p-32 rounded-[10%] pt-4 border-4 border-slate-500 '
+                                className='flex flex-col justify-center mx-auto p-32 rounded-[10%]  bg-zinc-800 pt-4 border-4 border-zinc-700 '
                             ><p className="navbar-title">My Address</p>
 
                                 <address className="navbar-text">
