@@ -33,7 +33,6 @@ const Testimonials = forwardRef((prop, ref) => {
   for (var i = 0; i < testimonials.length; i += size) {
     testimonialsitems.push(testimonials.slice(i, i + size));
   }
-  console.log("new arr", testimonialsitems);
 
   useEffect(() => {
     scrollReveal();
@@ -51,7 +50,7 @@ const Testimonials = forwardRef((prop, ref) => {
         <div ref={revealElement2} className="flex flex-col ">{testimonialsitems.map((items, index) => {
           return <div key={index} className="testimonial-card ml-0">
             {items.map((item) => {
-              return <div key={index} className="test-box bg-gray-800 p-8 min-w-[300px] min-h-[400px]">
+              return <div key={item.name} className="test-box bg-gray-800 p-8 min-w-[300px] min-h-[400px]">
                 <div className='flex justify-center'><img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={item.image.url} alt={item.image.url} />
                 </div>
                 <div className="blog-text">

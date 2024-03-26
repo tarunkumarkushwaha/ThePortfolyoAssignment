@@ -1,17 +1,14 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
 
 const Experience = forwardRef((prop, ref) => {
-    let experiencedata = prop.data.user.timeline
+    let sequences = prop.data.user.timeline.map((item)=>{return item.sequence}).sort()
+    let experiencedata = sequences.map(char=>prop.data.user.timeline.find(res=>res.sequence===char)) 
 
     const revealElement1 = useRef();
     const revealElement2 = useRef();
     const revealElement3 = useRef();
 
     const revealElements = [revealElement1, revealElement2, revealElement3]
-    const List = prop.data.user.skills;
-    const myList1 = List.slice(0, 10);
-    const myList2 = List.slice(10, 20);
-    // console.log(myList1,myList2)
 
     const scrollReveal = function () {
         for (let i = 0; i < revealElements.length; i++) {

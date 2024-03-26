@@ -6,10 +6,16 @@ const Skills = forwardRef((prop, ref) => {
   const revealElement3 = useRef();
 
   const revealElements = [revealElement1, revealElement2, revealElement3]
-  const List = prop.data.user.skills;
+
+  let sequences = prop.data.user.skills.map((item) => { return item.sequence }).sort(function(a, b) {
+    return a - b;
+  });
+  // let List = 
+  let List = [...new Set(sequences.map(char => prop.data.user.skills.find(res => res.sequence === char)))]
+  
+
   const myList1 = List.slice(0, 10);
   const myList2 = List.slice(10, 20);
-  // console.log(myList1,myList2)
 
   const scrollReveal = function () {
     for (let i = 0; i < revealElements.length; i++) {

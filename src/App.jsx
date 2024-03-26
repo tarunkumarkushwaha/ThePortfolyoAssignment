@@ -37,7 +37,7 @@ function App() {
         setData(data)
       })
   }, [])
-  console.log(data)
+  // console.log(data)
 
   useEffect(() => {
     document.title = data ? data.user.about.name : "loading";
