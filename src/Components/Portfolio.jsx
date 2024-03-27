@@ -18,7 +18,7 @@ const Portfolio = forwardRef((prop, ref) => {
     <>
       <section ref={ref} className="section gallery" id="gallery">
 
-        <div className="container sm:pl-16 pl-48">
+        <div className="container sm:pl-16 pl-52">
           <div className="flex-col h3">
             <h1 className="sub-title flex justify-center">Projects</h1>
           </div>

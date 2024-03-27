@@ -1324,9 +1324,8 @@ body.active {
   }
 
   .footer-bottom .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
 
   .footer-bottom .logo {
