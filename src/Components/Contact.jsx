@@ -48,17 +48,18 @@ const Contact = forwardRef((prop, ref) => {
 
                     <div className="flex flex-col justify-center m-5 rounder-md">
                         <div
-                            className='flex flex-col items-center mx-auto p-32 mb-10 rounded-[10%] bg-zinc-800 pt-4 border-4 border-zinc-700 '
+                            className='flex flex-col items-center mx-auto p-24 mb-10 rounded-[10%] bg-zinc-800 pt-4 border-4 border-zinc-700 '
                         >
-                            <p className="navbar-title">My Address</p>
+                            <p className="navbar-title pt-10">My Address</p>
 
-                            <address className="navbar-text">
+                            <address className="text-center">
                                 {prop.data.user.about.address}
                             </address>
 
                             <p className="navbar-text">
                                 For enquiry call at
-                                <a href={prop.data.user.about.phoneNumber} className="contact-link">{prop.data.user.about.phoneNumber}</a>
+                                <a href={prop.data.user.about.phoneNumber} className="contact-link">
+                                    {prop.data.user.about.phoneNumber}</a>
                             </p>
 
                         </div>

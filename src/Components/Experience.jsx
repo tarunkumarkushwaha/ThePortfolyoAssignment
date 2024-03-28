@@ -34,13 +34,13 @@ const Experience = forwardRef((prop, ref) => {
                 <div className="h3 md:ml-1 ml-40 ">
                     <h1 className="sub-title flex justify-center" ref={revealElement1}>Experience</h1>
                 </div>
-                <div className="flex flex-row gap-0 w-full md:ml-1 ml-16 justify-center mb-28">
-                    <div className='relative top-28 w-4 border rounded-tl-full border-red-100  bg-red-900 max-h-full'>
+                <div className="flex flex-row gap-0 w-full md:ml-1 ml-24 justify-center mb-28">
+                    <div className='relative top-28 w-2 border rounded-tl-full border-red-100  bg-red-900 max-h-full'>
                     </div>
                     <div className="flex-col" ref={revealElement2} data-reveal>
                         {experiencedata.map((item, i) => {
                             return <div key={i} className='p-20 relative left-0 flex flex-col'>
-                                <div className='relative top-8 right-20 h-4 w-20 border border-red-200 bg-red-900'></div>
+                                <div className='relative top-8 right-20 h-2 w-20 border border-red-200 bg-red-900'></div>
                                 <ul className=' border border-red-200  bg-zinc-800 rounded-2xl p-10'>
                                     <li>
                                         <h1 className='text-3xl text-zinc-300 font-serif font-bold my-2'>{item.company_name}</h1>
@@ -60,7 +60,7 @@ const Experience = forwardRef((prop, ref) => {
                                 </ul>
                             </div>
                         })}
-                        <div ref={revealElement3} className='relative h-4 right-20 bg-red-900 border border-red-100'></div>
+                        <div ref={revealElement3} className='relative h-2 right-20 bg-red-900 border border-red-100'></div>
                         
                     </div>
                 </div>
