@@ -1,42 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 
 const Cursor = () => {
-
   const cursor = useRef()
 
-  // const anchorElements = document.querySelectorAll("a");
-  // const buttons = document.querySelectorAll("button");
-
-
-
-  // // add hover effect on cursor, when hover on any button or hyperlink
-  // addEventOnElements(anchorElements, "mouseover", hoverActive);
-  // addEventOnElements(anchorElements, "mouseout", hoverDeactive);
-  // addEventOnElements(buttons, "mouseover", hoverActive);
-  // addEventOnElements(buttons, "mouseout", hoverDeactive);
-
-
-
   useEffect(() => {
-    // // add cursor hoverd class
-    // const hoverActive = function () { cursor.current.classList.add("hovered"); }
-
-    // // remove cursor hovered class
-    // const hoverDeactive = function () { cursor.current.classList.remove("hovered"); }
-
-    // change cursorElement position based on cursor move
-
-      // // add disabled class on cursorElement, when mouse out of body
-  // document.body.addEventListener("mouseout", function () {
-  //   cursor.classList.add("disabled");
-  // });
-
-  // // remove diabled class on cursorElement, when mouse in the body
-  // document.body.addEventListener("mouseover", function () {
-  //   cursor.classList.remove("disabled");
-  // });
     let mousemovefn = (event) => {
       setTimeout(function () {
+        let tags = event.target.className.split(' ')
+        for (let i = 0; i < tags.length; i++) {
+          if (tags[i] == "zoom") {
+            cursor.current.classList.add("hovered");
+          }
+          else { cursor.current.classList.remove("hovered") }
+        }
+        // console.log(event.target.className.split(' '))
         cursor.current.style.top = `${event.clientY}px`;
         cursor.current.style.left = `${event.clientX}px`;
       }, 100);

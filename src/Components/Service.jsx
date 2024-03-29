@@ -13,7 +13,7 @@ const Service = forwardRef((prop, ref) => {
               <li key={index} className="category-item">
                 <a href="#" className="category-card">
 
-                  <h3 className="h4 card-title">{item.name}</h3>
+                  <h3 className="h4 card-title zoom">{item.name}</h3>
 
                   <figure className="card-banner img-holder" style={{ width: 270, zIndex: 1, height: 320, borderRadius: 10, backgroundImage: `url(${item.image.url})` }}>
                     <div className="service-card flex flex-col justify-end items-center" style={{ width: 270, zIndex: 1, height: 320, borderRadius: 10 }}>

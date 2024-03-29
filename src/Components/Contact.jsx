@@ -58,7 +58,7 @@ const Contact = forwardRef((prop, ref) => {
 
                             <p className="navbar-text">
                                 For enquiry call at
-                                <a href={prop.data.user.about.phoneNumber} className="contact-link">
+                                <a href={prop.data.user.about.phoneNumber} className="contact-link zoom">
                                     {prop.data.user.about.phoneNumber}</a>
                             </p>
 

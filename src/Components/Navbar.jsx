@@ -35,64 +35,64 @@ const Navbar = ({ data, skills, home, about, services, contacts, portfolio, test
                 <div className="container">
 
                     <NavLink to="/" className="logo">
-                        <p className="imglogo">{data.user.about.name.trim()[0]}</p>
+                        <p className="imglogo zoom">{data.user.about.name.trim()[0]}</p>
                     </NavLink>
 
-                    <button className={`nav-open-btn`} aria-label="open menu" onClick={toggleNav} data-nav-toggler>
-                        <img src={menu} width="17" height="17" alt="menu icon" />
+                    <button className={`nav-open-btn zoom`} aria-label="open menu" onClick={toggleNav} data-nav-toggler>
+                        <img className='zoom' src={menu} width="17" height="17" alt="menu icon" />
                     </button>
 
                     <nav ref={menuRef} className={`navbar ${menuOpen && "active"}`} data-navbar>
 
                         <div className="navbar-top">
                             <NavLink to="/" className="logo">
-                                <p className="imglogo">{data.user.about.name.trim()[0]}</p>
+                                <p className="imglogo zoom">{data.user.about.name.trim()[0]}</p>
                             </NavLink>
 
-                            <button className="nav-close-btn" aria-label="close menu" onClick={toggleNav} data-nav-toggler>
-                                <span className="span one"></span>
-                                <span className="span two"></span>
+                            <button className="nav-close-btn zoom" aria-label="close menu" onClick={toggleNav} data-nav-toggler>
+                                <span className="span one zoom"></span>
+                                <span className="span two zoom"></span>
                             </button>
                         </div>
 
                         <ul className="navbar-list">
 
                             <li className="navbar-item">
-                                <div onClick={() => home.current.scrollIntoView()} className="navbar-link" data-nav-link>Home</div>
+                                <div onClick={() => home.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Home</div>
                             </li>
 
                             <li className="navbar-item">
-                                <div onClick={() => about.current.scrollIntoView()} className="navbar-link" data-nav-link>About</div>
+                                <div onClick={() => about.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>About</div>
                             </li>
 
                             <li className="navbar-item">
-                                <div onClick={() => services.current.scrollIntoView()} className="navbar-link" data-nav-link>Services</div>
+                                <div onClick={() => services.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Services</div>
                             </li>
 
                             <li className="navbar-item">
-                                <div onClick={() => portfolio.current.scrollIntoView()} className="navbar-link" data-nav-link>Projects</div>
+                                <div onClick={() => portfolio.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Projects</div>
                             </li>
 
                             <li className="navbar-item">
-                                <div onClick={() => skills.current.scrollIntoView()} className="navbar-link" data-nav-link>Skills</div>
+                                <div onClick={() => skills.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Skills</div>
                             </li>
                             <li className="navbar-item">
-                                <div onClick={() => experience.current.scrollIntoView()} className="navbar-link" data-nav-link>Experience</div>
+                                <div onClick={() => experience.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Experience</div>
                             </li>
                             <li className="navbar-item">
-                                <div onClick={() => testimonials.current.scrollIntoView()} className="navbar-link" data-nav-link>Testimonials</div>
+                                <div onClick={() => testimonials.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Testimonials</div>
                             </li>
 
                             <li className="navbar-item">
-                                <div onClick={() => contacts.current.scrollIntoView()} className="navbar-link" data-nav-link>Contact us</div>
+                                <div onClick={() => contacts.current.scrollIntoView()} className="navbar-link zoom" data-nav-link>Contact us</div>
                             </li>
 
                         </ul>
 
-                        <button className="login-btn">
-                            <img src={user} width="21" height="21" alt="user icon" />
+                        <button className="login-btn zoom">
+                            <img className='zoom' src={user} width="21" height="21" alt="user icon" />
 
-                            <span className="span">Login</span>
+                            <span className="span zoom">Login</span>
                         </button>
 
                         <div className="flex-col">

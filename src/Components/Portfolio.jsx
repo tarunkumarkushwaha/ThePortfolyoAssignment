@@ -41,8 +41,8 @@ const Portfolio = forwardRef((prop, ref) => {
                       <span className="card-tag">{item.techStack}</span>
                     </div>
 
-                    <a href="#" className="btn-icon">
-                      <img src={arrow} width="43" height="20" loading="lazy"
+                    <a href="#" className="btn-icon zoom">
+                      <img className='zoom' src={arrow} width="43" height="20" loading="lazy"
                         alt="arrow-forward icon" />
                     </a>
 
